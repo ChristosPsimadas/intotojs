@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function greet()
+        {
+            console.log("Hello World.");
+        }
+        function shoutTen()
+        {
+            console.log("10!");
+        }
+        function initialize()
+        {
+            num1 = 3;
+            num2 = 7;
+        }
+        function addNumbers()
+        {
+            var result = num1 + num2;
+            console.log(result);
+        }
+        function subtractNumbers()
+        {
+          var result = num1 - num2;
+            console.log(result);
+        }
+        function multiplyNumbers()
+        {
+            var result = num1 * num2;
+            console.log(result);
+        }
+        function divideNumbers()
+        {
+            var result = num1 / num2;
+            console.log(result);
+        }
+        function initializeClick()
+        {
+            outputDiv = document.getElementById("divout");
+        }
+        function clickResponse() 
+        {
+            outputDiv.innerHTML = "Now you've clicked the button.";
+        }
+        function initializeConditionals() 
+        {
+            numberOutput = document.getElementById("numberout");
+            negativeButton = document.getElementById("negativebtn");
+        
+            myNumber = 0;
+            negativesAllowed = false;
+            display();
+        }
+        function addOne() 
+        {
+            myNumber++;
+            display();
+        }
+        function subtractOne() 
+        {
+            myNumber--;
+            if (myNumber < 0 && !negativesAllowed) {
+                myNumber = 0;
+            }
+            display();
+        }
+        function toggleNegatives() 
+        {
+            negativesAllowed = !negativesAllowed;
+            display();
+        }
+        function display() 
+        {
+            numberOutput.innerHTML = myNumber;
+            if (!negativesAllowed) {
+                negativeButton.innerHTML = "Negatives are OFF";
+            } else {
+                negativeButton.innerHTML = "Negatives are ON";
+            }
+        }
+        function initializeStrings()
+        {
+            messageOutput = document.getElementById("output");
+        
+            message = "";
+        }
+        function displayString() 
+        {
+            messageOutput.innerHTML = message;
+        }
+        function addCharacter(ch)
+        {
+            message += ch;
+            displayString();
+        }
+    </script>
+
+</head>
+<body onload = "greet();initialize();initializeClick();initializeConditionals();initializeStrings();">
+    <h4>The Great Divide</h4>
+    <p>
+        In the world of web programming, there was once conflict. The burden 
+        of grouping text was left to the <span>monkeys</span> whose skills in 
+        such areas were so lacking that they could do little more than press 
+        the <b><i>Enter</i></b> key over and over again.
+    </p>
+    
+    <button onclick = "shoutTen();">Shout 10</button>
+    <button onclick = "addNumbers();">Add the 2 Numbers</button>
+    
+    <div id = "divout">
+        You have not clicked the button.
+    </div>
+    <button onclick="clickResponse();">Click me!</button>
+
+    <h1 id="numberout"></h1>
+    <hr />
+    <button onclick="addOne();">Add</button>
+    <button onclick="subtractOne();">Subtract</button>
+    <button onclick="toggleNegatives();" id="negativebtn">Negatives are OFF</button>
+
+    <div id = "output"></div>
+    <hr/>
+    <button onclick = "addCharacter('0');">0</button>
+    <button onclick = "addCharacter('1');">1</button>
+    <button onclick = "addCharacter('2');">2</button>
+    <button onclick = "addCharacter('3');">3</button>
+    <button onclick = "addCharacter('4');">4</button>
+    <button onclick = "addCharacter('5');">5</button>
+    <button onclick = "addCharacter('6');">6</button>
+    <button onclick = "addCharacter('7');">7</button>
+    <button onclick = "addCharacter('8');">8</button>
+    <button onclick = "addCharacter('9');">9</button>
+    <button onclick = "addCharacter('A');">A</button>
+    <button onclick = "addCharacter('B');">B</button>
+    <button onclick = "addCharacter('C');">C</button>
+    <button onclick = "addCharacter('D');">D</button>
+    <button onclick = "addCharacter('E');">E</button>
+    <button onclick = "addCharacter('F');">F</button>
+    <button onclick = "addCharacter('G');">G</button>
+    <button onclick = "addCharacter('H');">H</button>
+    <button onclick = "addCharacter('I');">I</button>
+    <button onclick = "addCharacter('J');">J</button>
+    <button onclick = "addCharacter('K');">K</button>
+    <button onclick = "addCharacter('L');">L</button>
+    <button onclick = "addCharacter('M');">M</button>
+    <button onclick = "addCharacter('N');">N</button>
+    <button onclick = "addCharacter('O');">O</button>
+    <button onclick = "addCharacter('P');">P</button>
+    <button onclick = "addCharacter('Q');">Q</button>
+    <button onclick = "addCharacter('R');">R</button>
+    <button onclick = "addCharacter('S');">S</button>
+    <button onclick = "addCharacter('T');">T</button>
+    <button onclick = "addCharacter('U');">U</button>
+    <button onclick = "addCharacter('V');">V</button>
+    <button onclick = "addCharacter('W');">W</button>
+    <button onclick = "addCharacter('X');">X</button>
+    <button onclick = "addCharacter('Y');">Y</button>
+    <button onclick = "addCharacter('Z');">Z</button>
+</body>
+</html>
